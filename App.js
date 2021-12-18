@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
 import MainStack from './navigate'
 
 const fonts = () => Font.loadAsync({
   'mt-bold': require('./assets/fonts/Montserrat-Bold.ttf'),
-  'mt-light': require('./assets/fonts/Montserrat-Light.ttf')
+  'mt-light': require('./assets/fonts/Montserrat-Light.ttf'),
+  'os-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
+  'os-light': require('./assets/fonts/OpenSans-Light.ttf'),
+  'os-regular': require('./assets/fonts/OpenSans-Regular.ttf')
 })
 
 export default function App() {

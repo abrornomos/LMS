@@ -2,10 +2,10 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { gStyle } from '../styles/style'
 
-export default function Contact() {
+export default function ISP() {
   return (
     <View style={gStyle.main}>
-      <Text style={gStyle.title}>Страница о нас</Text>
+      <Text style={gStyle.title}>Индивидуальный учебный план</Text>
     </View>
   )
 }
