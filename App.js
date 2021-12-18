@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { gStyle } from './styles/style'
+import { Button, StyleSheet, Text, View } from 'react-native'
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
+import MainStack from './navigate'
 
 const fonts = () => Font.loadAsync({
   'mt-bold': require('./assets/fonts/Montserrat-Bold.ttf'),
@@ -13,9 +13,7 @@ export default function App() {
   const [font, setFont] = useState(false)
   if (font) {
     return (
-      <View style={gStyle.main}>
-        <Text style={gStyle.title}>Title</Text>
-      </View>
+      <MainStack />
     )
   } else {
     return (
