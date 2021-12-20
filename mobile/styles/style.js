@@ -8,7 +8,7 @@ export const gStyle = StyleSheet.create({
   title: {
     fontSize: 20,
     color: "#333",
-    fontFamily: "mt-bold",
+    fontFamily: "os-regular",
     textAlign: "center"
   }
 })
