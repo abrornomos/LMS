@@ -16,5 +16,10 @@ db = SQLAlchemy(app)
 app.register_blueprint(student)
 
 
+# import os
+
+# print(os.urandom(24).hex())
+
+
 if __name__ == "__main__":
     app.run(debug=True)
