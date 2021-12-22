@@ -1,2 +1,4 @@
+autopep8
 flask-sqlalchemy
+mysqlclient
 pip-chill
