@@ -1,35 +1,24 @@
-from click.decorators import command
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import click
-from flask.cli import AppGroup
+from flask.cli import with_appcontext
 from lms.settings import *
 from student.apps import student
-from student.models import db
+from student.models import db as student_db
 
-def create_app(config_filename):
-    app = Flask(__name__, static_url_path=STATIC_URL, static_folder=PROJECT_DIR / "static", template_folder=PROJECT_DIR / "templates")
-    app.config.from_pyfile(config_filename)
-    
-    db.init_app(app)
-    with app.app_context():
-        # @app.cli.command("db")
-        # @click.argument("comand")
-        # def create_db(comand):
-        #     print("dddd")
-        #     if comand == 'create':
-        #         db.create_all()
-        #     elif comand == 'drop':
-        #         db.drop_all()
-        #     elif comand == 'reset':
-        #         db.drop_all()
-        #         db.create_all()
-        db.create_all()
-    
 
-    app.register_blueprint(student)
-   
-    return app
+app = Flask(__name__, static_url_path=STATIC_URL, static_folder=PROJECT_DIR / "static", template_folder=PROJECT_DIR / "templates")
+app.config.from_pyfile("env.py")
+
+
+student_db.init_app(app)
+@click.argument(name="create")
+def create():
+    print("dddd")
+    student_db.create_all()
+
+app.cli.add_command(name=create)
+app.register_blueprint(student)
 
 # import os
 
@@ -37,7 +26,4 @@ def create_app(config_filename):
 
 
 if __name__ == "__main__":
-    app = create_app('env.py')
-
-    
     app.run(debug=True)
