@@ -1,7 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
-from manage import app
+from lms import create_init_app
 
 
+app = create_init_app()
 db = SQLAlchemy(app)
 
 

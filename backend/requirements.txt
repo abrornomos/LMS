@@ -1,4 +1,4 @@
 autopep8
-flask-sqlalchemy
+flask-migrate
 mysqlclient
 pip-chill
