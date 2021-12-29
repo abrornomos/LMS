@@ -1,5 +1,7 @@
+from lms.settings import GLOBAL_DIR
+
 SECRET_KEY="8eb155f48bcc5928fa5ad7b56aa8623c01d9a7dff469bc23"
-SQLALCHEMY_DATABASE_URI = "mysql://lms:password@localhost:3306/lms"
+SQLALCHEMY_DATABASE_URI = f"sqlite:///{GLOBAL_DIR / 'database.sqlite3'}"
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 # DATABASE_ENGINE="mysql"

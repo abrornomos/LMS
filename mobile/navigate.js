@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import AppLoading from 'expo-app-loading'
-import { fonts } from './App'
+import { fonts } from './fonts'
 import Dashboard from './components/Dashboard'
 import Subjects from './components/Subjects'
 import Schedule from './components/Schedule'
