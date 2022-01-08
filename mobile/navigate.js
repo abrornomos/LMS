@@ -27,6 +27,11 @@ const Drawer = createDrawerNavigator()
 //   )
 // }
 
+
+//Abror nima gap? Oxshayaptimi?????
+
+
+
 function DrawerScreenHeaderOptions(title) {
   return {
     drawerItemStyle: {
